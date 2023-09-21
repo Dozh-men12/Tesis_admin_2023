@@ -10,7 +10,7 @@ function Inicio(){
                 
                 Este es el navbar main
             </div>
-           {/*  <aside>
+            <aside>
                 <nav>
                     <ul>
                         <li>Inicio</li>
@@ -18,7 +18,7 @@ function Inicio(){
                         <li>Datos</li>
                     </ul>
                 </nav>
-            </aside> */}
+            </aside>
             
             
         </div>

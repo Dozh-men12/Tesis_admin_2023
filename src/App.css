@@ -8,4 +8,9 @@
   align-items: center;
   background-size: cover;
   background-attachment: fixed;
-} */
+}
+ */
+.App{
+  margin: 0px;
+  padding: 0px;
+}
