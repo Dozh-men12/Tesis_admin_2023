@@ -1,0 +1,15 @@
+.button_navbar{
+    margin-top: 10px;    
+    padding: 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+/* 
+button{
+    width: max-content;
+    height: 15px;
+    color: aqua;
+    font-size: 20px;
+    font-weight: 2px;
+    font: 200;
+} */
