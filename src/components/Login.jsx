@@ -2,7 +2,7 @@ import React from "react";
 import '../stylesheets/Login.css'
 import logo from '../images/tecsup_logo.png'
 
-import {  BrowserRouter as Router, Routes,  Route,  Link} from "react-router-dom";
+import { Link} from "react-router-dom";
 function Login(){
     return(
         

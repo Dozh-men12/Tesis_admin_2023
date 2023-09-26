@@ -1,0 +1,8 @@
+.main-navbar{
+    right: 20px;
+    position: absolute;
+    text-align: center;
+    height: 80px;
+    width: 70%;
+    background-color: black;
+}
