@@ -60,12 +60,10 @@ function Login() {
                             <Link to="/inicio-admin"><button className="button-login">INICIAR SESIÓN</button></Link><br />
                             {/* <Link to="/inicio-admin" ><button className="button-login-google">Ingresa con tu correo de tecsup</button></Link> */}
 
-                        </div>
-                        <div className="buttons-container">
-                            {/* ... otros botones */}
                             <button onClick={signInWithGoogle} className="button-login-google">
                                 Ingresa con tu cuenta de Google
                             </button>
+
                         </div>
                     </form>
                 </div>
