@@ -1,4 +1,3 @@
-import React from "react";
 import './Button_navbar.css';
 
 function Button_navbar({texto}){
@@ -8,6 +7,6 @@ function Button_navbar({texto}){
         </div>
 
     );
-};
+}
 
 export default Button_navbar ;

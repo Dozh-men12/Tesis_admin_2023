@@ -1,8 +1,8 @@
-import React from "react";
+
 import '../stylesheets/Login.css'
 import logo from '../images/tecsup_logo.png'
 
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 function Login(){
     return(
         
@@ -13,10 +13,10 @@ function Login(){
                      </div>                                   
                     <div className="login-body">
                         <form action="">
-                            <label htmlFor="username">Correo electronico</label>
+                            <babel htmlFor="username">Correo electronico</babel>
                             <input type="text" placeholder="admin.tecsup@tecsup.edu.pe" autoFocus="autoFocus" id="username"/> <br />
 
-                            <label htmlFor="password" className="ic-Input text">Contraseña</label>
+                            <babel htmlFor="password" className="ic-Input text">Contraseña</babel>
                             <input type="password" placeholder="Password" autoFocus="autoFocus" id="password" /> <br />
 
                             <a  target="_blank_" href="https://Facebook.com">¿Olvido la contraseña?</a>
@@ -38,6 +38,6 @@ function Login(){
 
        
     );
-};
+}
 
 export default Login; 

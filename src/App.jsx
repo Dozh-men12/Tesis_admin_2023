@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Login from './components/Login'
 import Inicio from './components/pages/inicio/Inicio'
-import {  BrowserRouter as Router, Routes,  Route,  Link} from "react-router-dom";
+import {  BrowserRouter as Router, Routes,  Route} from "react-router-dom";
 
 function App() {
 

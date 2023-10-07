@@ -1,14 +1,15 @@
-import React from "react";
 import '../../../stylesheets/Inicio.css';
-import logo from '../../../images/tecsup_logo.png';
-import Button_navbar from "./left_navbar/buttons_component/Button_navbar";
 import Left_Navbar from "./left_navbar/Left_navbar";
+import Main_navbar from "./main_navbar/Main_navbar";
 
 function Inicio(){
     return(        
-        <div className="inicio-container">   
-        <Left_Navbar />
-
+        <>           
+        {/* <Left_Navbar/>    */}     
+        <Main_navbar/>
+        
+        
+       
         {/* // -------------------AQUÍ TENDRÍA QUE LLAMAR A MIS NAVBAR MAIN Y LEFT----------------------
 
             <div className="left-navbar">
@@ -30,8 +31,7 @@ function Inicio(){
            
             
             
-        </div>
+        </>
     );
-};
-
+}
 export default Inicio ;
