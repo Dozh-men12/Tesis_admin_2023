@@ -23,9 +23,10 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 function Login() {
-
+    // Importando useNavigate de react router dom para la validación de inicio de sesion con google
+    const navigate = useNavigate();
     // Función para manejar el inicio de sesión con Google
     const signInWithGoogle = () => {
         console.log("si inicia pop up");
@@ -35,6 +36,7 @@ function Login() {
             .then((result) => {
                 console.log("Usuario autenticado:", result.user);
                 // Aquí puedes redirigir al usuario a otra página si lo deseas, o hacer otras operaciones
+                navigate("/inicio-admin");
             })
             .catch((error) => {
                 console.error("Error durante el inicio de sesión con Google:", error);
