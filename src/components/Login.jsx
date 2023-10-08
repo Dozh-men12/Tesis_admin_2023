@@ -36,7 +36,12 @@ function Login() {
             .then((result) => {
                 console.log("Usuario autenticado:", result.user);
                 // Aquí puedes redirigir al usuario a otra página si lo deseas, o hacer otras operaciones
-                navigate("/inicio-admin");
+                if (result.user.email.endsWith("@tecsup.edu.pe")){
+                    navigate("/inicio-admin");
+                } else {
+                    auth.signOut();
+                    alert("Solo se permiten correos de TECSUP")
+                }
             })
             .catch((error) => {
                 console.error("Error durante el inicio de sesión con Google:", error);
