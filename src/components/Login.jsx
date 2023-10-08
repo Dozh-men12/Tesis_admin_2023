@@ -28,6 +28,7 @@ function Login() {
 
     // Función para manejar el inicio de sesión con Google
     const signInWithGoogle = () => {
+        console.log("si inicia pop up");
         const provider = new GoogleAuthProvider();
     
         signInWithPopup(auth, provider)
@@ -60,10 +61,9 @@ function Login() {
                             <Link to="/inicio-admin"><button className="button-login">INICIAR SESIÓN</button></Link><br />
                             {/* <Link to="/inicio-admin" ><button className="button-login-google">Ingresa con tu correo de tecsup</button></Link> */}
 
-                            <button onClick={signInWithGoogle} className="button-login-google">
+                            <button type="button" onClick={signInWithGoogle} className="button-login-google">
                                 Ingresa con tu cuenta de Google
                             </button>
-
                         </div>
                     </form>
                 </div>
