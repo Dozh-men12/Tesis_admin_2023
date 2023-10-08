@@ -1,26 +1,31 @@
 import './Left_Navbar.css'
 import {AiFillHome} from "react-icons/ai";
 import {VscHistory} from "react-icons/vsc"
-import logo from '../../../../images/tecsup_logo.png';
+import { Link } from "react-router-dom";
 
 
 
-const Left_Navbar = () =>{
+const Left_Navbar = ({children}) =>{
     return(
-        <div className='container-menu'>   {/*  left navbarr */}
+        <>
+        <div className='container-menu'> 
             <div className='cont-menu'>
                 <nav>
-                    <a href="#" ><AiFillHome className='icon' size="22px"/>Inicio</a>
-                    <a href="#"> <VscHistory  className='icon'size='22px'/>Historial</a>
-                    <a href="#">Inicio</a>
-                    <a href="#">Inicio</a>
+                    <Link to="/inicio-admin/stadistics"><AiFillHome className='icon' size="22px"/>Inicio</Link>
+                    <Link to="/inicio-admin/historial"> <VscHistory  className='icon'size='22px'/>Historial</Link>
+                    <Link  href="#">Inicio</Link>
+                    <Link  href="#">Inicio</Link>
                 </nav>
-              {/*   <label htmlFor=""><VscChromeClose/></label> */}
-            </div> 
-
-                  
+            </div>                  
         </div>  
+        <div className='children-main-content'>
+            {children}
+        </div>
+        </>
+        
+        
     );
 };
 
 export default Left_Navbar ;
+
