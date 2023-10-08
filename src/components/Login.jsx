@@ -9,14 +9,14 @@ function Login(){
         <div className="login-main">
             <div className="login-container">           
                     <div className="login-header">
-                        <img src={logo} alt="Logo de tecsup"  /> 
+                        <img  className='logo' src={logo} alt="Logo de tecsup"  /> 
                      </div>                                   
                     <div className="login-body">
                         <form action="">
-                            <babel htmlFor="username">Correo electronico</babel>
+                            <label className='label' htmlFor="username">Correo electronico</label>
                             <input type="text" placeholder="admin.tecsup@tecsup.edu.pe" autoFocus="autoFocus" id="username"/> <br />
 
-                            <babel htmlFor="password" className="ic-Input text">Contraseña</babel>
+                            <label htmlFor="password" className="ic-Input text label">Contraseña</label>
                             <input type="password" placeholder="Password" autoFocus="autoFocus" id="password" /> <br />
 
                             <a  target="_blank_" href="https://Facebook.com">¿Olvido la contraseña?</a>

@@ -4,27 +4,31 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    background-color: #70BBDB;
+    
 }
 .container{
     width: 100%;
-    max-width: 1200px;
+    max-width: 90%;
     margin: auto;
 }
 .container .menu{
     float: right;
     line-height: 70px;
 }
-button{
+.button{
     color: orange;
     padding: 5px;
 }
-button:hover{
+.button:hover{
+    cursor: pointer;
     background-color: blue;
 }
 .container .logo{
     float: left;
     line-height: 70px;
 }
+
 .container .menu a{
     display: inline-block;
     padding: 15px 10px;
@@ -40,9 +44,12 @@ button:hover{
     padding: 5px 10px;
 }
 
-
 label{
     color: black;
     font-size: 30px;    
 }
 
+.tecsup_logo{
+    height: 70px;
+    width: 75%;
+}

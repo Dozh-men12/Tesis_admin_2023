@@ -18,12 +18,12 @@
 a{
     color: white;
 }
-babel{
+.label{
     color: white;
     font-weight: 200;
     font-size: 15px;
 }
-.login-header{
+.login-header .logo{
     height: 80px;
     width: 50%;
     align-items: center;

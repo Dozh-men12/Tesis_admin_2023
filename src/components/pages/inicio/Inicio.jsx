@@ -5,8 +5,9 @@ import Main_navbar from "./main_navbar/Main_navbar";
 function Inicio(){
     return(        
         <>           
-        {/* <Left_Navbar/>    */}     
-        <Main_navbar/>
+        {/* <Main_navbar/> */}
+        <Left_Navbar/>
+        
         
         
        

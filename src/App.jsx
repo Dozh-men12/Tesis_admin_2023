@@ -16,7 +16,6 @@ function App() {
           <Route path="/inicio-admin" element={<Inicio/>}></Route>
         </Routes>
       </Router>
-     {/*  <Inicio></Inicio> */}
     </div>
   )
 
