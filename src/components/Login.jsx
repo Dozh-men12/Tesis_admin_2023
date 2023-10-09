@@ -35,12 +35,18 @@ function Login() {
         signInWithPopup(auth, provider)
             .then((result) => {
                 console.log("Usuario autenticado:", result.user);
+
+                // accesos especiales para correos
+                const allowedEmails = [
+                    "carlos.herrera.c@tecsup.edu.pe",
+                    "oscar.hurtado@tecsup.edu.pe"
+                ];
                 // Aquí puedes redirigir al usuario a otra página si lo deseas, o hacer otras operaciones
-                if (result.user.email.endsWith("@tecsup.edu.pe")){
+                if (allowedEmails.includes(result.user.email)) {
                     navigate("/inicio-admin");
                 } else {
                     auth.signOut();
-                    alert("Solo se permiten correos de TECSUP")
+                    alert("Solo se permiten correos especiales")
                 }
             })
             .catch((error) => {
