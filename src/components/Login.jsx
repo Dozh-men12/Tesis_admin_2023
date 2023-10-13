@@ -27,6 +27,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react
 function Login() {
     // Importando useNavigate de react router dom para la validación de inicio de sesion con google
     const navigate = useNavigate();
+    console.log("parco funciona?");
     // Función para manejar el inicio de sesión con Google
     const signInWithGoogle = () => {
         console.log("si inicia pop up");
