@@ -1,14 +1,12 @@
 import '../stylesheets/Inicio.css';
-import Left_Navbar from '../pages/inicio/navbar/left_navbar/Left_navbar';
-
-import Main_navbar from "./inicio/navbar/main_navbar/Main_navbar";
+import {Left_navbar , Main_navbar} from '../index'
 
 
 function Inicio(){
     return(        
         <>           
         <Main_navbar/>
-        <Left_Navbar/>
+        <Left_navbar/>
         
         </>
     );

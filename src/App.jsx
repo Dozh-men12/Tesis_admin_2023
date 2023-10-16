@@ -1,9 +1,10 @@
 import './App.css'
-import Login from './access/Login'
+import { Login, Inicio, Statistics, Historial} from './index'
+/* import Login from './access/Login'
 import Inicio from '../src/pages/Inicio'
-import Statistics from "../src/pages/statistics/Statistics"
+import Statistics from "../src/pages/statistics/Statistics" */
 import {  BrowserRouter as Router, Routes,  Route} from "react-router-dom";
-import Historial from '../src/pages/Historial/Historial'
+/* import Historial from '../src/pages/Historial/Historial' */
 
 function App() {
 

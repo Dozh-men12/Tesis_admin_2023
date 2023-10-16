@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 
-const Left_Navbar = ({children}) =>{
+const Left_navbar = ({children}) =>{
     return(
         <>
         <div className='container-menu'> 
@@ -27,5 +27,5 @@ const Left_Navbar = ({children}) =>{
     );
 };
 
-export default Left_Navbar ;
+export default Left_navbar ;
 
