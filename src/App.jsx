@@ -1,9 +1,9 @@
 import './App.css'
-import Login from './components/Login'
-import Inicio from './components/pages/inicio/Inicio'
-import Statistics from "../src/components/pages/inicio/main_content/statistics/Statistics"
+import Login from './access/Login'
+import Inicio from '../src/pages/Inicio'
+import Statistics from "../src/pages/statistics/Statistics"
 import {  BrowserRouter as Router, Routes,  Route} from "react-router-dom";
-import Historial from './components/pages/inicio/main_content/historial/Historial'
+import Historial from '../src/pages/Historial/Historial'
 
 function App() {
 

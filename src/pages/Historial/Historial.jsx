@@ -1,5 +1,5 @@
-import Left_Navbar from "../../left_navbar/Left_navbar";
-import Main_navbar from "../../main_navbar/Main_navbar";
+import Left_Navbar from "../../../src/pages/inicio/navbar/left_navbar/Left_navbar";
+import Main_navbar from "../../../src/pages/inicio/navbar/main_navbar/Main_navbar";
 
 const Historial = () =>{
     return(

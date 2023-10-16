@@ -1,6 +1,6 @@
 import './Main_navbar.css'
 import logo_tecsup from '../../../../images/tecsup_logo.png'
-import { VscThreeBars } from 'react-icons/vsc'
+
 
 const Main_navbar = () =>{
     return(

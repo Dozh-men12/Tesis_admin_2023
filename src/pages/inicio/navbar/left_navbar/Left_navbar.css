@@ -35,7 +35,7 @@
 }
 .cont-menu nav a:hover > .icon{
     color: #00AEEF; /* Cambia el color del icono cuando haces hover en el enlace */
-  }
+}
 
 .icon{
     margin-right:10px;
