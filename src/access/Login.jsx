@@ -1,6 +1,7 @@
 
 import '../stylesheets/Login.css'
 import logo from '../images/tecsup_logo.png'
+import {FcGoogle} from 'react-icons/fc'
 
 // Firebase
 import 'firebase/auth';
@@ -65,10 +66,10 @@ function Login() {
                         <label className='label' htmlFor="username">Correo electronico</label>
                         <input type="text" placeholder="admin.tecsup@tecsup.edu.pe" autoFocus="autoFocus" id="username" /> <br />
 
-                        <label htmlFor="password" className="ic-Input text label">Contraseña</label>
+                        <label htmlFor="password" className="label">Contraseña</label>
                         <input type="password" placeholder="Password" autoFocus="autoFocus" id="password" /> <br />
 
-                        <a target="_blank_" href="https://Facebook.com">¿Olvido la contraseña?</a>
+                        <a id='a' target="_blank_" href="https://Facebook.com">¿Olvido la contraseña?</a>
 
                         <div className="buttons-container">
 
@@ -76,7 +77,10 @@ function Login() {
                             {/* <Link to="/inicio-admin" ><button className="button-login-google">Ingresa con tu correo de tecsup</button></Link> */}
 
                             <button type="button" onClick={signInWithGoogle} className="button-login-google">
-                                Ingresa con tu cuenta de Google
+                                <div className='gogle-i-container'>
+                                    <FcGoogle size={35} className='google_icon'/>
+                                </div>                                
+                                Ingresa con tu correo de Tecsup
                             </button>
                         </div>
                     </form>
