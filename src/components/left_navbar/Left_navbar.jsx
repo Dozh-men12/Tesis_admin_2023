@@ -1,6 +1,6 @@
 import './Left_Navbar.css'
 import {AiFillHome} from "react-icons/ai";
-import {VscHistory} from "react-icons/vsc"
+import {VscHistory} from "react-icons/vsc";
 import { Link } from "react-router-dom";
 
 
@@ -8,11 +8,11 @@ import { Link } from "react-router-dom";
 const Left_navbar = ({children}) =>{
     return(
         <>
-        <div className='container-menu'> 
+        <div className='container-menu'>         
             <div className='cont-menu'>
                 <nav>
-                    <Link to="/inicio-admin/stadistics"><AiFillHome className='icon' size="22px"/>Inicio</Link>
-                    <Link to="/inicio-admin/historial"> <VscHistory  className='icon'size='22px'/>Historial</Link>
+                    <Link to="/inicio-admin/stadistics"><AiFillHome className='icon' size={22}/>Inicio</Link>
+                    <Link to="/inicio-admin/historial"> <VscHistory  className='icon'size={22}/>Historial</Link>
                     <Link  href="#">Inicio</Link>
                     <Link  href="#">Inicio</Link>
                 </nav>
