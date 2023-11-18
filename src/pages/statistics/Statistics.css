@@ -1,5 +1,9 @@
+.stadistics-container{
+    background-color: #2CB43A;
+    width: 286px ;
+    height: 120px;
+    position: relative;
+}
 .content{
-    text-align: center;
-    color: black;
-    font-size: 4450px;
+    
 }
