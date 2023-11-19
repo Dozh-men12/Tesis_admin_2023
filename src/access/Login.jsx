@@ -1,8 +1,5 @@
-
-import '../stylesheets/Login.css'
 import logo from '../images/tecsup_logo.png'
 import {FcGoogle} from 'react-icons/fc'
-
 // Firebase
 import 'firebase/auth';
 import { initializeApp } from 'firebase/app';
@@ -28,14 +25,13 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react
 function Login() {
     // Importando useNavigate de react router dom para la validación de inicio de sesion con google
     const navigate = useNavigate();
-    console.log("parco funciona?");
     // Función para manejar el inicio de sesión con Google
-    const signInWithGoogle = () => {
+    const signInWithGoogle = () => {  
         console.log("si inicia pop up");
         const provider = new GoogleAuthProvider();
     
         signInWithPopup(auth, provider)
-            .then((result) => {
+            .then((result) => { 
                 console.log("Usuario autenticado:", result.user);
 
                 // accesos especiales para correos
@@ -56,9 +52,45 @@ function Login() {
             });
     };
     return (
-        <div className="login-main">
-            <div className="login-container">
-                <div className="login-header">
+        <div className="login-main mx-auto my-auto flex justify-center items-center h-screen font-['Lato'] ">
+            <div className="login-container grid md:grid-cols-2 md:justify-center  w-[1190px] h-[611px] rounded-xl md:shadow-[0_0_24px_0px_rgba(0,0,0,0.3)]   ">
+                <div className='flex flex-col'>
+                    <div className='flex justify-center items-center mt-10'>
+                        <img src={logo}  alt="Logo de tecsup" className='w-[370px] ' />
+                    </div>
+                    <div className='mx-auto mt-[50px] flex flex-col gap-4'>
+                        <div className='flex flex-col gap-1'>
+                            <p className='font-semibold'>Ingrese su correo</p>
+                            <input type="email" className='border border-gray-dark rounded-md  w-[452px] h-[34px] px-3' />
+                        </div>
+                        <div className='flex flex-col gap-1'>
+                            <p className='font-semibold'>Ingrese su contraseña</p>
+                            <input type="password" className='border border-gray-dark rounded-md  w-[452px] h-[34px] px-3 text-xl' />
+                        </div>                        
+                        <div>                            
+                                <Link to='/inicio-admin'>
+                                    <button className='w-[452px] h-[43px] text-center bg-[#18A8D6] rounded-md font-bold'>
+                                        INICAR SESION
+                                    </button>
+                                </Link>                                     
+                        </div>
+                        <div>
+                            <button className='w-[452px] h-[43px] text-center bg-[#3369e8] rounded-md font-bold' onClick={signInWithGoogle}>
+                                {/* <div className='align-middle inline-block '>
+                                        <FcGoogle size={29} className='google_icon bg-white mr-[20px] '/>
+                                </div>  */}
+                            Ingresa con tu correo de Tecsup</button>
+                        </div>
+                        <a href="http://facebook.com" target="_blank" rel="noopener noreferrer" className='text-center mt-[15px] text-[0.875em]' >¿Olvidó su contraseña?</a>                                
+                    </div>
+
+
+                </div>
+                <div className='bg-[#70BBDB] md:rounded-r-xl'>
+
+                </div>
+              
+              {/*   <div className="login-header">
                     <img  className='logo' src={logo} alt="Logo de tecsup" />
                 </div>
                 <div className="login-body">
@@ -74,8 +106,6 @@ function Login() {
                         <div className="buttons-container">
 
                             <Link to="/inicio-admin"><button className="button-login">INICIAR SESIÓN</button></Link><br />
-                            {/* <Link to="/inicio-admin" ><button className="button-login-google">Ingresa con tu correo de tecsup</button></Link> */}
-
                             <button type="button" onClick={signInWithGoogle} className="button-login-google">
                                 <div className='gogle-i-container'>
                                     <FcGoogle size={35} className='google_icon'/>
@@ -84,7 +114,7 @@ function Login() {
                             </button>
                         </div>
                     </form>
-                </div>
+                </div> */}
             </div>
         </div>
     );
