@@ -1,5 +1,5 @@
 import './Main_navbar.css'
-import logo_tecsup from '../../images/tecsup_logo.png'
+
 import {FaCircleUser} from "react-icons/fa6";
 
 

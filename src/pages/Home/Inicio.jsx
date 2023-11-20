@@ -1,13 +1,13 @@
 import '../../stylesheets/Inicio.css';
-import {Left_navbar , Main_navbar} from '../../index'
+import {Navbar , Main_navbar} from '../../index'
 
 
 function Inicio(){
     return(        
-        <>           
-        <Main_navbar/>
-        <Left_navbar/>        
-        </>
+        <section className='h-screen bg-[#B4B4B4] '>           
+        {/* <Main_navbar/> */}
+        <Navbar/>        
+        </section>
     );
 }
 export default Inicio ;

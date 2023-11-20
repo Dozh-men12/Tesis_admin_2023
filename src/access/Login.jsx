@@ -23,8 +23,6 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
 
-
-
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 
 function Login() {

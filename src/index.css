@@ -13,6 +13,9 @@
 }
 
 @layer utilities {
+  .button-navbar{
+    @apply w-[220px] h-[50px] bg-[#70BBDB] mx-auto flex flex-row rounded-lg items-center;
+  }
   .padding {
     @apply sm:px-16 px-8 sm:py-24 py-12;
   }
