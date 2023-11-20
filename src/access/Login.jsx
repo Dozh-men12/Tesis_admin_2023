@@ -47,18 +47,18 @@ function Login() {
                     alert("Solo se permiten correos especiales")
                 }
             })
-            .catch((error) => {
+            .catch((error) => { 
                 console.error("Error durante el inicio de sesión con Google:", error);
             });
     };
     return (
-        <div className="login-main mx-auto my-auto flex justify-center items-center h-screen font-['Lato'] ">
-            <div className="login-container grid md:grid-cols-2 md:justify-center  w-[1190px] h-[611px] rounded-xl md:shadow-[0_0_24px_0px_rgba(0,0,0,0.3)]   ">
+        <div className="flex justify-center items-center h-screen font-[Lato] bg-slate-800">
+            <div className="grid md:grid-cols-2 md:justify-center w-[1190px] h-[611px] rounded-xl md:shadow-[0_0_24px_0px_rgba(0,0,0,0.3)] bg-white">
                 <div className='flex flex-col'>
                     <div className='flex justify-center items-center mt-10'>
                         <img src={logo}  alt="Logo de tecsup" className='w-[370px] ' />
                     </div>
-                    <div className='mx-auto mt-[50px] flex flex-col gap-4'>
+                    <div className='mt-[55px] flex justify-center items-center flex-col gap-4'>
                         <div className='flex flex-col gap-1'>
                             <p className='font-semibold'>Ingrese su correo</p>
                             <input type="email" className='border border-gray-dark rounded-md  w-[452px] h-[34px] px-3' />
@@ -75,18 +75,15 @@ function Login() {
                                 </Link>                                     
                         </div>
                         <div>
-                            <button className='w-[452px] h-[43px] text-center bg-[#3369e8] rounded-md font-bold' onClick={signInWithGoogle}>
-                                {/* <div className='align-middle inline-block '>
-                                        <FcGoogle size={29} className='google_icon bg-white mr-[20px] '/>
-                                </div>  */}
-                            Ingresa con tu correo de Tecsup</button>
+                            <button className='w-[452px] h-[43px] text-center bg-[#3369e8] rounded-md font-bold flex flex-row justify-center items-center ' onClick={signInWithGoogle}>                                
+                                <FcGoogle size={29} className='bg-white  align-middle inline-block  mr-12'/>                             
+                                Ingresa con tu correo de Tecsup
+                            </button>
                         </div>
-                        <a href="http://facebook.com" target="_blank" rel="noopener noreferrer" className='text-center mt-[15px] text-[0.875em]' >¿Olvidó su contraseña?</a>                                
+                        <a href="http://facebook.com" target="_blank" rel="noopener noreferrer" className='text-center mt-[15px] text-[0.875em]' >¿Olvidó su contraseña?</a>          
                     </div>
-
-
                 </div>
-                <div className='bg-[#70BBDB] md:rounded-r-xl'>
+                <div className='bg-[#70BBDB] md:rounded-r-xl '>
 
                 </div>
               
