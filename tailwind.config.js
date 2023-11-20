@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],
         times: ['"Times New Roman"'],
+        dm:['DM Sans', 'sans-serif'],
         'primary': ['Quicksand', 'sans-serif'],
       },
       colors: {

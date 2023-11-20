@@ -5,6 +5,8 @@ import 'firebase/auth';
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { getAnalytics } from "firebase/analytics";
+import { useState } from 'react';
+import { FaEye,FaEyeSlash } from "react-icons/fa";
 
 // Configuración de Firebase (obtén esto desde tu consola de Firebase)
 const firebaseConfig = {
@@ -21,7 +23,10 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
 
+
+
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
+
 function Login() {
     // Importando useNavigate de react router dom para la validación de inicio de sesion con google
     const navigate = useNavigate();
@@ -51,6 +56,14 @@ function Login() {
                 console.error("Error durante el inicio de sesión con Google:", error);
             });
     };
+
+    //-------------------------FUNCION PARA ACTUALIZAR EL ICONO DE PASSWORD-------------
+    const [password,setPassword] = useState(false)
+
+    const viewPassword = () =>{
+        setPassword(!password)
+    }
+
     return (
         <div className="flex justify-center items-center h-screen font-[Lato] bg-slate-800">
             <div className="grid md:grid-cols-2 md:justify-center w-[1190px] h-[611px] rounded-xl md:shadow-[0_0_24px_0px_rgba(0,0,0,0.3)] bg-white">
@@ -61,11 +74,17 @@ function Login() {
                     <div className='mt-[55px] flex justify-center items-center flex-col gap-4'>
                         <div className='flex flex-col gap-1'>
                             <p className='font-semibold'>Ingrese su correo</p>
-                            <input type="email" className='border border-gray-dark rounded-md  w-[452px] h-[34px] px-3' />
+                            <input type="email" placeholder='admin@tecsup.edu.pe' className='border border-gray-dark rounded-md  w-[452px] h-[34px] px-3' />
                         </div>
                         <div className='flex flex-col gap-1'>
                             <p className='font-semibold'>Ingrese su contraseña</p>
-                            <input type="password" className='border border-gray-dark rounded-md  w-[452px] h-[34px] px-3 text-xl' />
+                            {/* <span></span> */}
+                            <div className='border border-gray-dark rounded-md  w-[452px] h-[34px] px-3 flex'>
+                                <input type={password ? "text" : "password"} placeholder='Ingrese su contraseña' className='w-[400px] h-[30px] mt-[1px]  shadow-none bg-none border-none focus:outline-none focus:ring-0' required />
+                                <div className='my-auto ml-[9px]' onClick={viewPassword}>
+                                    {password ? <FaEye  size={20}/> : <FaEyeSlash size={20}/>}
+                                </div>
+                            </div>                            
                         </div>                        
                         <div>                            
                                 <Link to='/inicio-admin'>
@@ -76,7 +95,7 @@ function Login() {
                         </div>
                         <div>
                             <button className='w-[452px] h-[43px] text-center bg-[#3369e8] rounded-md font-bold flex flex-row justify-center items-center ' onClick={signInWithGoogle}>                                
-                                <FcGoogle size={29} className='bg-white  align-middle inline-block  mr-12'/>                             
+                                <FcGoogle size={29} className='bg-white  align-middle inline-block mr-12'/>                             
                                 Ingresa con tu correo de Tecsup
                             </button>
                         </div>
