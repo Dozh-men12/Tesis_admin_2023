@@ -1,13 +1,15 @@
 import '../../stylesheets/Inicio.css';
 import {Navbar , Main_navbar} from '../../index'
+import Header from '../../components/Header/Header';
 
 
 function Inicio(){
     return(        
-        <section className='h-screen bg-[#B4B4B4] '>           
-        {/* <Main_navbar/> */}
-        <Navbar/>        
-        </section>
+        <div className='bg-[#E9E9E9] h-screen flex'>   
+        <Navbar/>     
+        <Header/>
+        {/* <Header/>   */}              
+        </div>
     );
 }
 export default Inicio ;

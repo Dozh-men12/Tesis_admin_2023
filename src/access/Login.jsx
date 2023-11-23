@@ -79,7 +79,7 @@ function Login() {
                             {/* <span></span> */}
                             <div className='border border-gray-dark rounded-md  w-[452px] h-[34px] px-3 flex'>
                                 <input type={password ? "text" : "password"} placeholder='Ingrese su contraseña' className='w-[400px] h-[30px] mt-[1px]  shadow-none bg-none border-none focus:outline-none focus:ring-0' required />
-                                <div className='my-auto ml-[9px]' onClick={viewPassword}>
+                                <div className='my-auto ml-[9px] cursor-pointer' onClick={viewPassword}>
                                     {password ? <FaEye  size={20}/> : <FaEyeSlash size={20}/>}
                                 </div>
                             </div>                            
@@ -97,7 +97,9 @@ function Login() {
                                 Ingresa con tu correo de Tecsup
                             </button>
                         </div>
-                        <a href="http://facebook.com" target="_blank" rel="noopener noreferrer" className='text-center mt-[15px] text-[0.875em]' >¿Olvidó su contraseña?</a>          
+                        <a href="http://facebook.com" target="_blank" rel="noopener noreferrer" className='text-center mt-[15px] text-[0.875em]  hover:text-blue-300 hover:underline underline-offset-1'>
+                            ¿Olvidó su contraseña?
+                        </a>          
                     </div>
                 </div>
                 <div className='bg-[#70BBDB] md:rounded-r-xl '>
