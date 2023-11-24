@@ -1,4 +1,4 @@
-import logo_tecsup from '../../images/tecsup_logo.png'
+import logo_tecsup from '../../images/logo.svg'
 import Buttons from './components/Buttons';
 import {navbarData} from "../../constans/index";
 import { RiSettings3Fill } from "react-icons/ri";
@@ -8,11 +8,11 @@ import { TbLogout2 } from "react-icons/tb";
 const Navbar = () =>{
     return(
         <>       
-        <section className="h-screen w-[250px] flex flex-col  bg-slate-50 fixed">
+        <section className="h-screen w-[250px] dark:bg-slate-700 flex flex-col  bg-slate-50 fixed">
             <div className='px-[10px] py-[10px]'>
-                <img src={logo_tecsup} alt="logo tecsup" className='h-[70px]' />
+                <img src={logo_tecsup} alt="logo tecsup" className='h-[80px] dark:bg-slate-700' />
             </div>
-            <div className='flex flex-col gap-4 mt-[30px]'>
+            <div className='flex flex-col gap-4 mt-[55px]'>
                 {navbarData.map((buttons ,index) => (
                     <Buttons key={index} {...buttons}/>
                 )
@@ -23,11 +23,8 @@ const Navbar = () =>{
                 <Buttons  icono={<TbLogout2  size={20}/>} texto={"Salir"}/>  
             </div>
      
-        </section>
-        
-        </>
-        
-        
+        </section>        
+        </>          
         
     );
 };

@@ -5,7 +5,7 @@ import Header from '../../components/Header/Header';
 
 function Inicio(){
     return(        
-        <div className='bg-[#E9E9E9] h-screen flex'>   
+        <div className='bg-[#E9E9E9] dark:bg-[#2D2E34] h-screen '>   
         <Navbar/>     
         <Header/>
         {/* <Header/>   */}              

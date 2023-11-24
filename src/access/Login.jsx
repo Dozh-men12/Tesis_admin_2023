@@ -86,13 +86,13 @@ function Login() {
                         </div>                        
                         <div>                            
                                 <Link to='/inicio-admin'>
-                                    <button className='w-[452px] h-[43px] text-center bg-[#18A8D6] rounded-md font-bold'>
+                                    <button className='px-[170px] py-2 text-center bg-[#18A8D6] flex flex-row justify-center items-center rounded-md font-bold'>
                                         INICAR SESION
                                     </button>
                                 </Link>                                     
                         </div>
                         <div>
-                            <button className='w-[452px] h-[43px] text-center bg-[#3369e8] rounded-md font-bold flex flex-row justify-center items-center ' onClick={signInWithGoogle}>                                
+                            <button className=' px-20 py-2 text-center bg-[#3369e8] rounded-md font-bold flex flex-row justify-center items-center ' onClick={signInWithGoogle}>                                
                                 <FcGoogle size={29} className='bg-white  align-middle inline-block mr-12'/>                             
                                 Ingresa con tu correo de Tecsup
                             </button>

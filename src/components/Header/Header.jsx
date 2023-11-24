@@ -4,42 +4,67 @@ import { BiMoon, BiSolidMoon} from "react-icons/bi";
 import { useState } from "react";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { FaUserCircle } from "react-icons/fa";
+import { MdOutlineWbSunny } from "react-icons/md";
+import { useFetcher } from "react-router-dom";
+import { useEffect } from "react";
 
-
-
-/* const [password,setPassword] = useState(false)
-
-    const viewPassword = () =>{
-        setPassword(!password)
-    } */
-/* const [icon, setIcon] = useState(false)
-
-const handlerIcon = () =>{
-    setIcon(!icon)
-} */
 
 
 const Header = () =>{
+
+    const [icon, setIcon] = useState(false)
+    const [theme ,  setTheme] = useState(()=>{
+
+        if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            return "dark";
+        }
+        return "light"
+    })
+    
+
+    useEffect(()=>{
+        if (theme === "dark"){
+            document.querySelector('html').classList.add('dark')
+        }else{
+            document.querySelector('html').classList.remove('dark')
+        }
+
+    }, [theme])
+
+
+    const handleIcon = () =>{
+        setIcon(!icon),
+        setTheme(prevTheme => prevTheme === "light" ? "dark" : "light")
+    }
+    
+   /*  const handleChangeTheme = () =>{
+        setTheme(prevTheme => prevTheme === "light" ? "dark" : "light")
+    } */
+
+   
+
+
+
+
     return(
         <>
          {/* <Navbar/>  */}
-        <div className="bg-slate-50 flex h-[70px]  md:w-[85%]  my-4 fixed left-[250px] mx-5 rounded-md flex-row items-center justify-between ">
-            <div className="bg-slate-300 h-[38px] my-auto w-[350px] flex rounded-full mx-[20px]">
+        <div className="bg-slate-50 flex h-[70px]  dark:bg-slate-700 w-[88%] my-4 fixed left-[250px] mx-5 rounded-md flex-row items-center justify-between ">
+            <div className="hover:bg-slate-300 focus-visible:bg-slate-300 h-[38px] my-auto w-[350px] flex rounded-full mx-[20px] dark:bg-slate-800 dark:text-white">
                 <div className=" flex items-center justify-center ml-[20px] mr-[4px]">
                     <GoSearch size={22}/>
                     <input type="text"  className="shadow-none mx-[10px]  bg-none border-none bg-transparent focus:outline-none focus:ring-0" placeholder="Buscar" />
                 </div>                
             </div >
             <div className= "flex my-auto mx-[20px] gap-6 text-black lg:w-auto lg:flex-row lg:pr-2" >
-                <div /* onClick={handlerIcon} */ className="my-auto" >
-                <BiSolidMoon size={25}/>
-                    {/* {icon ? <BiMoon size={22}/> : <BiSolidMoon size={22}/>} */}
+                <div onClick={handleIcon} className="my-auto" >
+                    {icon ? <BiMoon  style={{ color: '#0ED2E2' }} size={25}/> : <MdOutlineWbSunny color="black" size={25}/>}
                 </div>
                 <div className="my-auto">
-                <IoNotificationsOutline size={25}/>
+                    <IoNotificationsOutline className="dark:text-slate-100" size={25}/>
                 </div>
                 <div className="my-auto">
-                    <FaUserCircle size={45}/>
+                    <FaUserCircle className="dark:text-slate-100" size={45}/>
                 </div>
             </div>
            

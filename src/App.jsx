@@ -1,4 +1,3 @@
-import './App.css'
 import { Login, Inicio, Statistics, Historial} from './index'
 /* import Login from './access/Login'
 import Inicio from '../src/pages/Inicio'
