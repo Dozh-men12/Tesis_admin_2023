@@ -1,20 +1,23 @@
-import logo_tecsup from '../../images/logo.svg'
+import logo_tecsup from '../../assets/logo.svg'
 import Buttons from './components/Buttons';
 import {navbarData} from "../../constans/index";
 import { RiSettings3Fill } from "react-icons/ri";
 import { TbLogout2 } from "react-icons/tb";
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () =>{
     return(
         <>       
-        <section className="h-screen w-[250px] dark:bg-slate-700 flex flex-col  bg-slate-50 fixed">
+        <section className="sm:h-screen w-[250px] dark:bg-slate-700 flex flex-col absolute bg-slate-50 ">
             <div className='px-[10px] py-[10px]'>
                 <img src={logo_tecsup} alt="logo tecsup" className='h-[80px] dark:bg-slate-700' />
             </div>
             <div className='flex flex-col gap-4 mt-[55px]'>
                 {navbarData.map((buttons ,index) => (
-                    <Buttons key={index} {...buttons}/>
+                    <Link key={index} to={buttons.URL}>
+                        <Buttons key={index} {...buttons}/>
+                    </Link>
                 )
                 )}
             </div>            

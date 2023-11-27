@@ -8,8 +8,6 @@ import { MdOutlineWbSunny } from "react-icons/md";
 import { useFetcher } from "react-router-dom";
 import { useEffect } from "react";
 
-
-
 const Header = () =>{
 
     const [icon, setIcon] = useState(false)
@@ -37,26 +35,19 @@ const Header = () =>{
         setTheme(prevTheme => prevTheme === "light" ? "dark" : "light")
     }
     
-   /*  const handleChangeTheme = () =>{
-        setTheme(prevTheme => prevTheme === "light" ? "dark" : "light")
-    } */
-
-   
-
-
 
 
     return(
         <>
          {/* <Navbar/>  */}
-        <div className="bg-slate-50 flex h-[70px]  dark:bg-slate-700 w-[88%] my-4 fixed left-[250px] mx-5 rounded-md flex-row items-center justify-between ">
+        <div className="bg-slate-50 flex h-[70px]  dark:bg-slate-700 w-[88%] rounded-md flex-row justify-between absolute  ">
             <div className="hover:bg-slate-300 focus-visible:bg-slate-300 h-[38px] my-auto w-[350px] flex rounded-full mx-[20px] dark:bg-slate-800 dark:text-white">
                 <div className=" flex items-center justify-center ml-[20px] mr-[4px]">
                     <GoSearch size={22}/>
                     <input type="text"  className="shadow-none mx-[10px]  bg-none border-none bg-transparent focus:outline-none focus:ring-0" placeholder="Buscar" />
                 </div>                
             </div >
-            <div className= "flex my-auto mx-[20px] gap-6 text-black lg:w-auto lg:flex-row lg:pr-2" >
+            <div className= "flex my-auto mx-[20px] gap-6 text-black lg:w-auto lg:flex-row lg:pr-2 cursor-pointer" >
                 <div onClick={handleIcon} className="my-auto" >
                     {icon ? <BiMoon  style={{ color: '#0ED2E2' }} size={25}/> : <MdOutlineWbSunny color="black" size={25}/>}
                 </div>

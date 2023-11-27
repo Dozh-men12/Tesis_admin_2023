@@ -7,16 +7,17 @@ export const navbarData = [
     {   
         icono:<RxDashboard size={20}/>,
         texto:"Dashboard",
-        icono2:<IoIosArrowForward size={16}/>
+        URL:"/inicio-admin/dashboard"
     },
     {
         icono:<GrHistory size={20}/>,
         texto:"Historial",
-        icono2:<IoIosArrowForward size={16}/>
+        URL:"/inicio-admin/historial"
     },
     { 
         icono:<FaUsers size={20}/>,
         texto:"Usuarios",
-        icono2:<IoIosArrowForward size={16}/>
+        URL:"/inicio-admin/usuarios"
     },
 ]
+

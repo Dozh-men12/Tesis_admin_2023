@@ -1,8 +1,13 @@
 export { default as App } from './App';
 export { default as Login } from './access/Login';
+export { default as Header } from './components/Header/Header';
+export { default as Navbar } from './components/Navbar/Navbar';
+export { default as Buttons } from './components/Navbar/components/Buttons';
+export { default as Main_navbar } from './components/main_navbar/Main_navbar';
+export * from './constans';
+export * from './index';
 export * from './main';
+export { default as Dashboard } from './pages/Dashboard/Dashboard';
 export { default as Historial } from './pages/Historial/Historial';
 export { default as Inicio } from './pages/Home/Inicio';
-export { default as Navbar } from './components/Navbar/Navbar';
-export { default as Main_navbar } from './components/main_navbar/Main_navbar';
-export { default as Statistics } from './pages/statistics/Statistics';
+export { default as Users } from './pages/Users/Users';

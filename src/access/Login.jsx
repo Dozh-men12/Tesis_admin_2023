@@ -1,4 +1,4 @@
-import logo from '../images/tecsup_logo.png'
+import logo from '../assets/tecsup_logo.png'
 import {FcGoogle} from 'react-icons/fc'
 // Firebase
 import 'firebase/auth';
@@ -83,7 +83,7 @@ function Login() {
                                     {password ? <FaEye  size={20}/> : <FaEyeSlash size={20}/>}
                                 </div>
                             </div>                            
-                        </div>                        
+                        </div>                      
                         <div>                            
                                 <Link to='/inicio-admin'>
                                     <button className='px-[170px] py-2 text-center bg-[#18A8D6] flex flex-row justify-center items-center rounded-md font-bold'>

@@ -1,4 +1,4 @@
-import { Login, Inicio, Statistics, Historial} from './index'
+import { Login, Inicio, Users, Dashboard, Historial} from './index'
 /* import Login from './access/Login'
 import Inicio from '../src/pages/Inicio'
 import Statistics from "../src/pages/statistics/Statistics" */
@@ -8,16 +8,14 @@ import {  BrowserRouter as Router, Routes,  Route} from "react-router-dom";
 function App() {
 
   return (
-    <div className='App'>      
-      
-      <Router>
+    <div className='App'>         
         <Routes>
-          <Route path='/' element={<Login/>}></Route>
+          <Route path='/' index element={<Login/>}/>
           <Route path="/inicio-admin" element={<Inicio/>}></Route>
-          <Route path='/inicio-admin/stadistics' element={<Statistics/>}></Route>
+          <Route path='/inicio-admin/dashboard' element={<Dashboard/>}></Route>
           <Route path='/inicio-admin/historial' element={<Historial/>}></Route>
-        </Routes>
-      </Router>
+          <Route path='/inicio-admin/usuarios' element={<Users/>}></Route>
+        </Routes>      
     </div>
   )
 
